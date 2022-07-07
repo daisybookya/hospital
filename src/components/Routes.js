@@ -35,12 +35,12 @@ const menuRoutes = [
     element:<Feeding />,
     path:'Feeding'
 },
-{
-    label:'404',
-    key:'404',
-    element:<NoMatch />,
-    path:'*'
-},
+// {
+//     label:'404',
+//     key:'404',
+//     element:<NoMatch />,
+//     path:'*'
+// },
 ]
 
 export default menuRoutes

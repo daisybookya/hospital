@@ -1,6 +1,7 @@
 {
   "name": "hospital",
   "version": "0.1.0",
+  "homepage": "https://daisybookya.github.io/hospital/",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.4.4",
@@ -9,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "antd": "^4.21.4",
     "craco-less": "^2.0.0",
+    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
@@ -16,6 +18,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test"
