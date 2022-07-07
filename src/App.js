@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import './css/App.less';
+import { Breadcrumb, Layout} from 'antd';
+import TopMenu from './components/Header';
+import menuRoutes from './components/Routes';
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+const { Content, Footer } = Layout;
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <Layout className="layout">
+    <TopMenu></TopMenu>
+    <Content
+      style={{
+        padding: '50px',
+      }}
+    >
+      <Breadcrumb
+        style={{
+          margin: '16px 0',
+        }}
+      ></Breadcrumb>
+      <div className="site-layout-content">
+        <Routes>{
+            menuRoutes.map((i)=> <Route path={i.path} 
+            element={i.element} key={i.key}></Route>)
+          }
+        </Routes>
+      </div>
+    </Content>
+    <Footer
+      style={{
+        textAlign: 'center',
+      }}
+    >
+      ChengCheng Design ©2022 Created by Cheng
+    </Footer>
+  </Layout>
+);
 
 export default App;
