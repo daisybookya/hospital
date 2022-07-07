@@ -88,7 +88,7 @@ function BabyFood(){
         const fetchUrl =async()=>{
             try{
                 setLoading(true)
-                const response = await fetch('./baby_food.json')
+                const response = await fetch(`${process.env.PUBLIC_URL}/baby_food.json`)
                 const data = await response.json();
                 const newDataList = handleData(data)
                 setDataList(newDataList)

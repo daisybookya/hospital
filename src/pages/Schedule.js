@@ -41,7 +41,7 @@ function Schedule(){
         const fetchData = async()=>{
             try{
                 setLoading(true)
-                const resp = await fetch('./baby_schedule.json')
+                const resp = await fetch(`${process.env.PUBLIC_URL}/baby_schedule.json`)
                 const data = await resp.json()
                 const newData = handleData(data)
                 setDataList(newData)

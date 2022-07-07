@@ -35,7 +35,7 @@ function Vaccine(){
         const fetchData = async()=>{
             try{
                 setLoading(true)
-                const fetchUrl = await fetch('./baby.json')
+                const fetchUrl = await fetch(`${process.env.PUBLIC_URL}/baby.json`)
                 const theData = await fetchUrl.json()
                 // console.log('fetch!',theData)
                 const newData = handleData(theData)

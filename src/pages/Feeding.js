@@ -39,7 +39,7 @@ function Feeding(){
     useEffect(()=>{
         const loadData = ()=> {
             setLoading(true)
-            fetch('./feeding.json')
+            fetch(`${process.env.PUBLIC_URL}/feeding.json`)
             .then((res)=> res.json())
             .then((data)=>{
                 setRoomData(data)

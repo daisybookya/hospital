@@ -9,7 +9,7 @@ const menuRoutes = [
     label:'首頁',
     key:'Home',
     element:<Home />,
-    path:'/'
+    path:'/hospital'
 },
 {
     label:'嬰幼兒疫苗接種介紹',
@@ -35,12 +35,12 @@ const menuRoutes = [
     element:<Feeding />,
     path:'Feeding'
 },
-// {
-//     label:'404',
-//     key:'404',
-//     element:<NoMatch />,
-//     path:'*'
-// },
+{
+    label:'404',
+    key:'404',
+    element:<NoMatch />,
+    path:'*'
+},
 ]
 
 export default menuRoutes
