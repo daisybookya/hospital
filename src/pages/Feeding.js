@@ -87,6 +87,7 @@ function Feeding(){
                 title={(i)=>i['辦理單位']}
                 area={(i)=>i['鄉鎮市區']}
                 clickTag={(i)=>handleOpt(i['鄉鎮市區'])}
+                mapLink={(i)=> handleMapLink(i)}
                 search={(i)=>searchData(i)}
                 content={(i)=>handleData(i)}>
             </InforCard>
@@ -111,6 +112,14 @@ function handleData(item){
 function searchData(keyword){
     if(keyword !== null){
         const _url = `https://www.google.com.tw/search?q=${keyword['辦理單位']}`
+        window.open(_url)
+    }
+    return false
+}
+//按鈕-地圖連結功能
+function handleMapLink(infor){
+    if(infor !== null){
+        const _url = `https://www.google.com.tw/maps/place/${infor['地址']}`
         window.open(_url)
     }
     return false

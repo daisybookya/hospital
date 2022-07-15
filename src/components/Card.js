@@ -1,8 +1,11 @@
 import { Card,List,Tag } from 'antd';
-import { EditOutlined, GlobalOutlined} from '@ant-design/icons';
+import { ZoomInOutlined,InfoCircleOutlined} from '@ant-design/icons';
 
 const cardHeadStyle = {
   'background':'#cbe1f3'
+}
+const iconSize = {
+  'font-size':'22px'
 }
 function InforCard(props){
     return (
@@ -30,8 +33,8 @@ function InforCard(props){
             <Card title={props.title(item)} headStyle={cardHeadStyle} 
             actions={[
                 <Tag color="blue" onClick={()=>props.clickTag(item)}>{props.area(item)}</Tag>,
-                <EditOutlined key="edit" />,
-                <GlobalOutlined key="global" onClick={()=>props.search(item)}/>,
+                <InfoCircleOutlined style={iconSize} onClick={()=> props.mapLink(item) }/>,
+                <ZoomInOutlined style={iconSize} key="global" onClick={()=>props.search(item)}/>,
               ]}>
                 {props.content(item)}
             </Card>
