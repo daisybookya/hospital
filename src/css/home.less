@@ -3,17 +3,91 @@
 @sedColor:#cbe1f3;
 
 .home-content{
-    //background: url('../../public/flower.jpg');
-    .card-intro{
-        height: 150px;
-        padding: 30px 50px;
-        position: relative;
-        text-align: center;
-        border-radius: 50px;
-        background: #fff;
-        background-image: url('../../public/bush.webp');
+    padding: 30px 0;
+    background-image: url('../../public/babytoy.jpg');
+    background-repeat: no-repeat;
+    background-position:  left;
+    background-size: cover;
+    border-radius: 20px;
+}
+.animation{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background-size: cover;
+    background-image: url('../../public/smiling.jpg');
+    background-position: 0% 20%;
+    background-color: #fffbf6;
+    transition: all 1s ease-in-out;
+    transition-delay: 500ms;
+    opacity: 1;
+    &.fixed{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+
+    }
+&.active{
+    opacity: 0;
+}
+&.opacity{
+    .title{
+        span{
+            opacity: 1;
+        }
     }
 }
+    .title{
+        width: 100%;
+        position: relative;
+        margin-top: 10vh;
+        font-family: 'Caveat', cursive;
+        font-size: 80px;
+
+        span{
+            padding: 0 15px;
+            display: block;
+            position: absolute;
+            left: 7%;
+            color: @mainColor;
+            opacity: 0;
+            transition: all 1s ease-in-out;
+            &:nth-child(1){
+                transform: translateY(-10%);
+                animation: slideHead 1.5s;
+            }
+            &:nth-child(2){
+                transform: translateY(80%);
+                animation: slideFoot 1.5s;
+            }
+        }
+    }
+}
+@keyframes slideHead{
+    from{
+        transform: translateY(40%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(-10%);
+        opacity: 1;
+    }
+}
+@keyframes slideFoot{
+    from{
+        transform: translateY(40%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(80%);
+        opacity: 1;
+    }
+}
+
 .tool-intro{
     margin-top: 50px;
 }
