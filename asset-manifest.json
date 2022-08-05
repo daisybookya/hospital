@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/hospital/static/css/main.15223742.css",
-    "main.js": "/hospital/static/js/main.3ca2f902.js",
+    "main.css": "/hospital/static/css/main.5eec842b.css",
+    "main.js": "/hospital/static/js/main.0736c2e5.js",
     "static/js/787.b5bfac4d.chunk.js": "/hospital/static/js/787.b5bfac4d.chunk.js",
-    "static/media/bush.webp": "/hospital/static/media/bush.a26b5ae459b0fa07361a.webp",
+    "static/media/smiling.jpg": "/hospital/static/media/smiling.5e8c0b3899a179b3b020.jpg",
+    "static/media/babytoy.jpg": "/hospital/static/media/babytoy.6dc8f76d177cc3e9a0dc.jpg",
     "index.html": "/hospital/index.html",
-    "main.15223742.css.map": "/hospital/static/css/main.15223742.css.map",
-    "main.3ca2f902.js.map": "/hospital/static/js/main.3ca2f902.js.map",
+    "main.5eec842b.css.map": "/hospital/static/css/main.5eec842b.css.map",
+    "main.0736c2e5.js.map": "/hospital/static/js/main.0736c2e5.js.map",
     "787.b5bfac4d.chunk.js.map": "/hospital/static/js/787.b5bfac4d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.15223742.css",
-    "static/js/main.3ca2f902.js"
+    "static/css/main.5eec842b.css",
+    "static/js/main.0736c2e5.js"
   ]
 }
