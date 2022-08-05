@@ -21,7 +21,7 @@ function TopMenu(){
         for(let i=0;i<list.length;i++){
             list[i].classList.remove('ant-menu-item-selected')
         }
-        clickMenu({key:'/hospital'})
+        clickMenu({key:'/'})
     }
     const menuObj = menuRoutes.filter((v)=> v.key !== '404'&& v.key !== 'Home')
     const openNotificationWithIcon = (type) => {

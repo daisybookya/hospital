@@ -9,7 +9,7 @@ const menuRoutes = [
     label:'首頁',
     key:'Home',
     element:<Home />,
-    path:'/hospital'
+    path:'/'
 },
 {
     label:'嬰幼兒疫苗接種介紹',
